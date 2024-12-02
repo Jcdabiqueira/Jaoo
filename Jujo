@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para Ana e João</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+            text-align: center;
+        }
+        h1 {
+            font-family: 'Cursive', cursive;
+            color: #ff69b4;
+            margin-top: 20px;
+        }
+        .link-drive {
+            margin: 20px;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 18px;
+            display: inline-block;
+        }
+        .texto-fofo {
+            margin: 30px auto;
+            font-size: 18px;
+            max-width: 600px;
+            line-height: 1.6;
+            color: #444;
+        }
+        .contador {
+            margin: 20px auto;
+            font-size: 24px;
+            font-weight: bold;
+            color: #007bff;
+        }
+        footer {
+            margin-top: 40px;
+            font-size: 20px;
+            color: #555;
+        }
+        .spotify-embed {
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Nomes -->
+    <h1>João Victor Santana Pizzi</h1>
+    <h1>E</h1>
+    <h1>Ana Luísa König Rett</h1>
+
+    <!-- Link para o Google Drive -->
+    <a class="link-drive" href="https://drive.google.com/drive/folders/1rgPl5kTLpzcnFZ8dG9JD0i84YmCtGjwf" target="_blank">Clique aqui para ver as fotos!</a>
+
+    <!-- Texto fofo -->
+    <div class="texto-fofo">
+        <p>
+            Meu amor, desde o momento em que te conheci, minha vida mudou de uma forma que eu nunca imaginei. 
+            Você é a razão do meu sorriso, a luz dos meus dias e o calor que aquece meu coração. 
+            Não importa o que aconteça, quero estar ao seu lado para te apoiar, te proteger e te amar. 
+            Você é tudo o que sempre sonhei, e eu sou grato por cada segundo que passo com você. 
+            Obrigado por ser minha companheira, minha inspiração e meu amor eterno.
+        </p>
+    </div>
+
+    <!-- Spotify Embed -->
+    <div class="spotify-embed">
+        <iframe src="https://open.spotify.com/embed/track/7KA4W4McWYRpgf0fWsJZWB?utm_source=generator" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+    </div>
+
+    <!-- Contador de tempo juntos -->
+    <div class="contador" id="contador">
+        <!-- O script irá preencher aqui -->
+    </div>
+
+    <!-- Frase final -->
+    <footer>
+        <p>Viver era apenas uma tarefa chata, até conhecer realmente a minha vida.</p>
+    </footer>
+
+    <!-- Script para o contador -->
+    <script>
+        function atualizarContador() {
+            const inicio = new Date('2023-12-20T00:00:00');
+            const agora = new Date();
+
+            const diff = agora - inicio;
+
+            const anos = Math.floor(diff / (1000 * 60 * 60 * 24 * 365));
+            const meses = Math.floor((diff % (1000 * 60 * 60 * 24 * 365)) / (1000 * 60 * 60 * 24 * 30.44));
+            const dias = Math.floor((diff % (1000 * 60 * 60 * 24 * 30.44)) / (1000 * 60 * 60 * 24));
+            const horas = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutos = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+            const segundos = Math.floor((diff % (1000 * 60)) / 1000);
+
+            document.getElementById('contador').textContent = 
+                `Estamos juntos há ${anos} anos, ${meses} meses, ${dias} dias, ${horas} horas, ${minutos} minutos e ${segundos} segundos!`;
+        }
+
+        setInterval(atualizarContador, 1000);
+    </script>
+</body>
+</html>
